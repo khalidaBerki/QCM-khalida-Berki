@@ -1,12 +1,10 @@
 # QCM Accessibilité et Next.js
 
 ## Instructions
-- Durée : 3h
 - Cochez les cases correspondant à vos réponses en remplaçant [ ] par [x]
-- Pour les questions à choix multiples, plusieurs réponses peuvent être correctes
-- Convertissez ce fichier en PDF et envoyez-le à [adresse email]
-- Nom : _______________________
-- Date : _______________________
+- Les questions à choix multiples sont précisées
+- Compléter le document et l'envoyer à l'adresse mail noelie.roux2@eemi.com
+- Prénom Nom : _______________________
 
 ## 1. Fondamentaux de l'accessibilité
 
@@ -52,7 +50,7 @@ export default function Page() {
 <meta name="title" content="Mon titre" />
 ```
 
-3. Quels éléments HTML5 sont considérés comme des landmarks ?
+3. Quels éléments HTML5 sont considérés comme des landmarks ? (plusieurs réponses possibles)
 - [ ] a) `<header>`
 - [ ] b) `<div>`
 - [ ] c) `<nav>`
@@ -124,7 +122,7 @@ const handleClick = () => {
 ```javascript
 <Link href="#main" passHref>Skip to content</Link>
 ```
-8. Quelle est la bonne pratique pour les liens ouvrant dans un nouvel onglet ?
+8. Quelle est la bonne pratique pour les liens ouvrant dans un nouvel onglet ? (plusieurs réponses possibles)
 - [ ] a) `<a href="url" target="_blank">`
 - [ ] b) `<a href="url" target="_blank" rel="noopener noreferrer">`
 - [ ] c) `<a href="url" target="_blank" aria-label="opens in new tab">`
@@ -181,7 +179,7 @@ const handleClick = () => {
 - [ ] c) Utiliser les niveaux selon l'importance visuelle
 - [ ] d) Commencer chaque section par un h1
 
-## 2. Composants React Accessibles (45min)
+## 2. Composants React Accessibles
 
 ### 2.1 Formulaires
 
@@ -228,7 +226,7 @@ const handleClick = () => {
 ```
 ### 2.2 Composants Interactifs
 
-12. Quelle est la meilleure implémentation pour une modale accessible ?
+12. Quelle est la meilleure implémentation pour une modale accessible ? (plusieurs réponses possibles)
 - [ ] a)
 ```javascript
 <div className="modal">
@@ -320,11 +318,11 @@ const handleClick = () => {
       role="menu"
       aria-labelledby="menu-button"
     >
-      <li role="none">
-        <a role="menuitem" href="#1">Option 1</a>
+      <li role="menuitem">
+        <a href="#1">Option 1</a>
       </li>
-      <li role="none">
-        <a role="menuitem" href="#2">Option 2</a>
+      <li role="menuitem">
+        <a href="#2">Option 2</a>
       </li>
     </ul>
   )}
@@ -411,7 +409,7 @@ const handleClick = () => {
 ```
 ## 3. Tests et Monitoring
 
-16. Quels outils sont recommandés pour tester l'accessibilité dans Next.js ?
+16. Quels outils sont recommandés pour tester l'accessibilité dans Next.js ? (plusieurs réponses possibles)
 - [ ] a) Jest avec @testing-library/jest-dom
 - [ ] b) Cypress avec cypress-axe
 - [ ] c) ESLint avec eslint-plugin-jsx-a11y
@@ -421,11 +419,11 @@ const handleClick = () => {
 
 17. Quelle est la meilleure pratique pour les tests d'accessibilité automatisés ?
 - [ ] a) Tester uniquement avec des lecteurs d'écran
-- [ ] b) Utiliser une combinaison d'outils statiques et dynamiques
+- [ ] b) Utiliser une combinaison d'outils automatisés et des tests manuels
 - [ ] c) Se fier uniquement aux tests automatisés
 - [ ] d) Tester manuellement avec le clavier
 
-18. Comment intégrer les tests d'accessibilité dans une CI/CD ?
+18. Comment intégrer les tests d'accessibilité dans une CI/CD ? (plusieurs réponses possibles)
 - [ ] a)
 ```javascript
 // package.json
@@ -478,7 +476,7 @@ describe('Accessibility tests', () => {
 ```
 ## 4. Patterns Avancés
 
-19. Quelle approche est préférable pour gérer le focus dans une application SPA ?
+19. Quelle est la meilleure approche pour gérer le focus dans une Single Page App ?
 - [ ] a)
 ```javascript
 const router = useRouter()
@@ -591,7 +589,7 @@ const Toast = ({ message, type = 'info', onClose }) => (
 ```
 ## 5. Exercice pratique de code
 
-Écrivez un composant React accessible Accordion qui respecte les critères suivants :
+Écrivez un composant Next.js accessible Accordion qui respecte les critères suivants :
 - L'accordion doit pouvoir contenir plusieurs sections
 - Chaque section doit avoir un en-tête et un contenu
 - Un seul panneau peut être ouvert à la fois
@@ -619,18 +617,17 @@ Critères d'évaluation :
 - Gestion correcte du focus et navigation clavier
 - Structure des composants et props
 - Gestion de l'état
-- Bonus : animations accessibles
 
 ## Bonus
 
-21. Quelles sont les bonnes pratiques pour l'internationalisation accessible ?
+21. Quelles sont les bonnes pratiques pour l'internationalisation accessible ? (plusieurs réponses possibles)
 - [ ] a) Utiliser l'attribut lang sur html
 - [ ] b) Gérer la direction du texte (RTL/LTR)
 - [ ] c) Traduire les attributs aria
 - [ ] d) Adapter les landmarks selon la langue
 - [ ] e) Utiliser des polices adaptées à chaque langue
 
-22. Comment optimiser les performances tout en maintenant l'accessibilité ?
+22. Comment optimiser les performances tout en maintenant l'accessibilité ? (plusieurs réponses possibles)
 - [ ] a) Lazy loading avec fallback accessible
 - [ ] b) Réduire le JavaScript initial
 - [ ] c) Optimiser les images avec bon alt
