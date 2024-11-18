@@ -1,0 +1,16 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+button:focus {
+  outline: 2px solid #0070f3; /* Met en surbrillance les boutons au focus pour l'accessibilité */
+}
